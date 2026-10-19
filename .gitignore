@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# PyInstaller / build output
+build/
+dist/
+release/
+
+# Editor/OS noise
+*.log
+Thumbs.db
+desktop.ini

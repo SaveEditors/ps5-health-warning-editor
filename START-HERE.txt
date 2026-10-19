@@ -1,0 +1,20 @@
+PS5 HEALTH WARNING EDITOR 1.0.0
+================================
+
+1. Turn the console on and start its FTP server (AniketosHEN: port 1337).
+2. Run PS5HealthWarningEditor.exe.
+3. Enter the console IP + FTP port and click Connect. The tool backs up the
+   current warning file locally AND on the console before enabling the editor.
+4. Type the new warning text, then click "Apply to console".
+5. "Restart console to see changes!" - fully power the console off, then on.
+
+Notes
+-----
+- Tested on PS5 firmware 12.60 with AniketosHEN.
+- The warning screen only appears on a full cold boot, not Rest Mode.
+- Only the English warning text is edited. A non-English console UI keeps its
+  own stock warning.
+- Backups: Documents\PS5 Health Warning Editor\backups\
+           /system_ex/vsh_asset/PUI_UI3_BACKUP_*.rco.bak
+- To restore the original text, see docs\RESTORE-STOCK.md.
+- Unofficial tool, not affiliated with Sony Interactive Entertainment.

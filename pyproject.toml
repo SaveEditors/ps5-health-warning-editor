@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ps5-health-warning-editor"
+version = "1.0.0"
+description = "Standalone cold-boot health-warning text editor for PS5"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "PS5 Health Warning Editor contributors"}]
+keywords = ["ps5", "health-warning", "rco", "ftp", "cold-boot"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pyftpdlib>=2.0",
+    "pyinstaller>=6.10",
+    "pytest>=8",
+    "pytest-cov>=5",
+    "ruff>=0.6",
+    "pillow>=10",
+]
+
+[project.scripts]
+ps5-health-warning-editor = "ps5_health_warning_editor.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+filterwarnings = [
+    "ignore:write permissions assigned to anonymous user:RuntimeWarning",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["ps5_health_warning_editor"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["ps5_health_warning_editor"]
