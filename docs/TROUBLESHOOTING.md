@@ -32,6 +32,18 @@ deleted the temp file and did not touch the live file. Retry; if it keeps
 happening the FTP transfer is being corrupted or interrupted. Wired network
 recommended.
 
+## "Could not upload ... connection aborted" (console out of space)
+
+Each Connect also uploads a ~105 MB backup to the console, and Apply needs
+~105 MB of free space for the temporary file. On a console with little free
+space the transfer can abort mid-upload (`WinError 10053`). The live file is
+never touched when that happens, and the partial temp file is deleted.
+
+Free space by deleting old backups from `/system_ex/vsh_asset/`
+(`PUI_UI3_BACKUP_*.rco.bak`) over FTP — keep only the newest if you want one on
+the console — then Connect and Apply again. The local backup in
+`Documents\PS5 Health Warning Editor\backups\` is unaffected.
+
 ## Console still shows old/stock text after Apply
 
 - The warning screen only appears on a full cold boot. Rest Mode and a normal

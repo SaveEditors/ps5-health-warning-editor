@@ -107,6 +107,11 @@ When you click **Connect**:
 
 Editing stays disabled unless both backups succeed.
 
+The console backup is a full copy of the RCO (~105 MB), and Apply needs about
+the same amount again for the temporary file. If the console's writable space
+is tight, delete old `PUI_UI3_BACKUP_*.rco.bak` files over FTP before applying
+(see [TROUBLESHOOTING.md](TROUBLESHOOTING.md)).
+
 ## Apply flow
 
 When you click **Apply to console**:

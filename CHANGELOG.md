@@ -21,6 +21,9 @@
   △ (U+25B3), ○ (U+25CB), × (U+00D7), □ (U+25A1), ⭐ (U+2B50).
   `✕` (U+2715) is not in the console's legal-text font — it cold-booted as a
   missing-glyph box, so `×` (U+00D7) is used for the cross instead.
+- Console-space note: the console backup is a full ~105 MB copy of the RCO and
+  Apply needs ~105 MB free for the temporary file; an aborted upload never
+  touches the live file. See docs/TROUBLESHOOTING.md.
 
 Tested on PS5 firmware 12.60 with AniketosHEN. Unofficial; not affiliated with
 Sony Interactive Entertainment.
